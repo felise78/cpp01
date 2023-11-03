@@ -6,7 +6,7 @@
 /*   By: hemottu <hemottu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 20:27:20 by hemottu           #+#    #+#             */
-/*   Updated: 2023/11/03 19:02:42 by hemottu          ###   ########.fr       */
+/*   Updated: 2023/11/03 20:19:44 by hemottu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,10 @@
 
 std::string		ft_replace(std::string line, std::string s1, std::string s2)
 {
-	int i = line.find(s1);
+	if (line.empty() || s1.empty() || s2.empty())
+		return ("error");
+	int i = 0;
+	i = line.find(s1);
 	while (i != -1)
 	{
 		line.erase(i, s1.size());
@@ -57,7 +60,12 @@ int main(int argc, char **argv)
 	std::string s2 = argv[3];
 	
 	while(getline(fichier, line))
-		copie << ft_replace(line, s1, s2);
+	{
+		line = ft_replace(line, s1, s2);
+		if (line == "error")
+			return (1);
+		copie << line;
+	}
 	
 	return 0;
 }
