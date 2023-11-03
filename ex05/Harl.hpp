@@ -6,26 +6,31 @@
 /*   By: hemottu <hemottu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 13:36:36 by hemottu           #+#    #+#             */
-/*   Updated: 2023/11/02 13:41:33 by hemottu          ###   ########.fr       */
+/*   Updated: 2023/11/03 20:33:01 by hemottu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef HARL_HPP
+# define HARL_HPP
 
 #include <string>
 
 class Harl {
 
-public:
+	public:
 
-Harl();
-~Harl();
+	Harl();
+	~Harl();
 
-void complain( std::string level );
+	void complain( std::string level );
 
-private :
+	private :
 
-void	debug(void);
-void	info(void);
-void	warning(void);
-void	error(void);
+	void	debug(void);
+	void	info(void);
+	void	warning(void);
+	void	error(void);
 
 };
+
+#endif
