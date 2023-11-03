@@ -6,7 +6,7 @@
 /*   By: hemottu <hemottu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:23:29 by hemottu           #+#    #+#             */
-/*   Updated: 2023/10/31 20:24:58 by hemottu          ###   ########.fr       */
+/*   Updated: 2023/11/03 21:07:45 by hemottu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,9 @@ HumanA::~HumanA()
 void HumanA::attack()
 {
 	std::cout << this->m_name << " attacks with their " << this->m_weapon.getType() << std::endl;
+}
+
+void	HumanA::setWeapon(Weapon weapon)
+{
+	this->m_weapon = weapon;
 }

@@ -6,7 +6,7 @@
 /*   By: hemottu <hemottu@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 17:23:48 by hemottu           #+#    #+#             */
-/*   Updated: 2023/11/03 15:29:04 by hemottu          ###   ########.fr       */
+/*   Updated: 2023/11/03 21:05:55 by hemottu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Weapon
 	Weapon(std::string type);
 	~Weapon();
 	
-	std::string	getType() const;
+	const std::string&	getType(void);
 
 	void		setType(std::string type);
 	
